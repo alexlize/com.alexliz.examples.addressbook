@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.swarco.examples.addressbook/src" modelPluginID="com.swarco.examples.addressbook"
+    modelName="Addressbook" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>addressbook.ecore</foreignModel>
+  <genPackages prefix="Addressbook" disposableProviderFactory="true" ecorePackage="addressbook.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="addressbook.ecore#//PhoneType">
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//PhoneType/PHONE"/>
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//PhoneType/FAX"/>
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//PhoneType/MOBILE"/>
+    </genEnums>
+    <genClasses ecoreClass="addressbook.ecore#//AddressBook">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//AddressBook/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference addressbook.ecore#//AddressBook/contacts"/>
+    </genClasses>
+    <genClasses ecoreClass="addressbook.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/firstName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference addressbook.ecore#//Contact/phones"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference addressbook.ecore#//Contact/addresses"/>
+    </genClasses>
+    <genClasses ecoreClass="addressbook.ecore#//Phone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Phone/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Phone/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Phone/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Phone/inernationalArea"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Phone/name"/>
+    </genClasses>
+    <genClasses ecoreClass="addressbook.ecore#//Address">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/postalCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Address/number"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
